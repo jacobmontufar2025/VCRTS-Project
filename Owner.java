@@ -1,15 +1,16 @@
 import java.awt.*;
 import javax.swing.*;
-public class Client extends JFrame {
-  private String clientName;
-  public Client(String clientName) {
-      this.clientName = clientName;
+public class Owner extends JFrame {
+  private String OwnerName;
+  public Owner(String OwnerName) {
+      this.OwnerName = OwnerName;
       setTitle("Client Interface");
       setSize(700, 500);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setLocationRelativeTo(null);
       
-      JLabel label = new JLabel("Welcome, " + clientName + "!", SwingConstants.CENTER);
+      
+      JLabel label = new JLabel("Welcome, " + OwnerName + "!", SwingConstants.CENTER);
       JPanel mainPanel = new JPanel();
       mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
       mainPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));// padding top,left,bottom, right
@@ -20,7 +21,7 @@ public class Client extends JFrame {
       setVisible(true);
   }
   
-  public void submitJob() {
-      System.out.println("Client job submitted!");
+  public void rentCar() {
+      System.out.println("Car rented!");
   }
 }

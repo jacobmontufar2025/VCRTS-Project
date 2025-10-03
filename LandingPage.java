@@ -158,12 +158,11 @@ public class LandingPage extends JFrame {
                   infoLabel.setText("Invalid username or password!");
               }
           } else if (index == 2) { // Owner
-              if (username.equals("ownerUser") && password.equals("ownerPass")) {
+              if (username.equals("owner") && password.equals("owner123")) {
                  this.setVisible(false);
                   //create a Owner.java class
-                  //Owner owner = new Owner();
                   //owner.rentCar(); // your owner logic here
-                  // Owner owner1 = new Owner(username);
+                  Owner owner1 = new Owner(username);
               } else {
                   infoLabel.setText("Invalid username or password!");
               }
