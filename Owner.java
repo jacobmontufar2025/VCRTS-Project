@@ -4,7 +4,7 @@ public class Owner extends JFrame {
   private String OwnerName;
   public Owner(String OwnerName) {
       this.OwnerName = OwnerName;
-      setTitle("Client Interface");
+      setTitle("Owner Interface");
       setSize(700, 500);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setLocationRelativeTo(null);
