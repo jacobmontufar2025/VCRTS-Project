@@ -7,5 +7,5 @@ javac "filenmae.java"
 ## Run code(filename is Main):
 
 ```bash
-java "filename"
+runmain
 ```

@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import io.github.cdimascio.dotenv.Dotenv;
 
 
 public class LandingPage extends JFrame {
@@ -12,15 +13,18 @@ public class LandingPage extends JFrame {
     private JComboBox<String> roleComboBox;
     private JPanel loginPanel;
     private JLabel infoLabel;
+    Dotenv dotenv = Dotenv.load();
+
     
 
     // Client auth info
-    private final String CLIENT_USERNAME = "princetaller";
-    private final String CLIENT_PASSWORD = "guy1234";
+    private final String CLIENT_USERNAME = dotenv.get("CLIENT_USERNAME");
+    private final String CLIENT_PASSWORD = dotenv.get("CLIENT_PASSWORD");
   
     // Owner auth info
-    private final String OWNER_USERNAME = "owner"; 
-    private final String OWNER_PASSWORD = "owner123";
+     
+    private final String OWNER_USERNAME = dotenv.get("OWNER_USERNAME"); 
+    private final String OWNER_PASSWORD = dotenv.get("OWNER_PASSWORD");
 
     public LandingPage() {
         //main frame boiler
