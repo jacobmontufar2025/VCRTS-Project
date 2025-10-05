@@ -9,7 +9,7 @@ import java.io.FileWriter;
  * The VisJob class represents the job submission window for clients.
  * Each logged-in client can submit job details such as their ID, 
  * job duration, and job deadline. Submitted data is logged and saved to a file.
- * this is visjob
+ * this is visjob!
  */
 public class VisJob extends JFrame {
 
