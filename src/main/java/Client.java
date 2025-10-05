@@ -1,10 +1,11 @@
+
 import java.awt.*;
 import javax.swing.*;
-public class Owner extends JFrame {
-  private String OwnerName;
-  public Owner(String OwnerName) {
-      this.OwnerName = OwnerName;
-      setTitle("Owner Interface");
+public class Client extends JFrame {
+  private String clientName;
+  public Client(String clientName) {
+      this.clientName = clientName;
+      setTitle("Client Interface");
       setSize(700, 500);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setLocationRelativeTo(null);
@@ -17,7 +18,7 @@ public class Owner extends JFrame {
       add(mainPanel);
 
       // Welcome message
-      JLabel label = new JLabel("Welcome, " + OwnerName + "!", SwingConstants.CENTER);
+      JLabel label = new JLabel("Welcome, " + clientName + "!", SwingConstants.CENTER);
       label.setAlignmentX(Component.LEFT_ALIGNMENT);
 
       // Back button panel
@@ -43,7 +44,7 @@ public class Owner extends JFrame {
       setVisible(true);
     }
   
-  public void rentCar() {
-      System.out.println("Car rented!");
+  public void submitJob() {
+      System.out.println("Client job submitted!");
   }
 }

@@ -1,14 +1,18 @@
 
+
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class LandingPage extends JFrame {
  
     private JComboBox<String> roleComboBox;
     private JPanel loginPanel;
     private JLabel infoLabel;
+    
 
     // Client auth info
     private final String CLIENT_USERNAME = "princetaller";
