@@ -153,6 +153,10 @@ public class LandingPage extends JFrame {
                   //create a Client.java class
                   //Client client = new Client();
                   //client.submitJob(); // your client logic here
+                  
+                  //just add my changes (jacob) not really neccessary
+                  //refer to client class line 58 or so
+                  
                   Client client1 = new Client(username);
               } else {
                   infoLabel.setText("Invalid username or password!");

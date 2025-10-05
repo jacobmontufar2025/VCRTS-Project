@@ -1,0 +1,13 @@
+
+Username: princetaller
+Timestamp: 2025-10-05 14:20:07
+Client ID: 7447589
+Job Duration: 10 hrs
+Job Deadline: 10/23/25
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-05 15:02:08
+Client ID: 1234556
+Job Duration: 10 hrs
+Job Deadline: 10/25/30
+-------------------------
