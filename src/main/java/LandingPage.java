@@ -156,15 +156,14 @@ public class LandingPage extends JFrame {
           String password = new String(passwordField.getPassword());
       
           if (index == 1) { // Client
-              if (username.equals("princetaller") && password.equals("guy1234")) {
-                  this.setVisible(false);
-                  //create a Client.java class
-                  //Client client = new Client();
-                  //client.submitJob(); // your client logic here
-                  Client client1 = new Client(username);
-              } else {
-                  infoLabel.setText("Invalid username or password!");
-              }
+      	    if (username.equals("princetaller") && password.equals("guy1234")) {
+      	        this.setVisible(false);
+      	        // Automatically open the VisJob page for the client
+      	        new VisJob(username);
+      	    } else {
+      	        infoLabel.setText("Invalid username or password!");
+      	    }
+      	
           } else if (index == 2) { // Owner
               if (username.equals("owner") && password.equals("owner123")) {
                  this.setVisible(false);
