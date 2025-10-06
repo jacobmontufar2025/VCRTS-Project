@@ -7,5 +7,15 @@ javac "filenmae.java"
 ## Run code(filename is Main):
 
 ```bash
-runmain
+mvn exec:java -Dexec.mainClass="Main"
 ```
+
+or
+
+```bash
+alias runmain='mvn exec:java -Dexec.mainClass="Main"'
+
+
+```
+
+and type runmain on terminal
