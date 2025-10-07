@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 /**
  * VisJob class represents the GUI for clients to submit jobs.
@@ -83,21 +85,21 @@ public class VisJob extends JFrame {
         gc.gridx = 0; gc.gridy = r; form.add(new JLabel("Job Duration:"), gc);
         gc.gridx = 1; gc.gridy = r++; form.add(durationPanel, gc);
 
-        gc.gridx = 0; gc.gridy = r; form.add(new JLabel("Job Deadline:"), gc);
+        gc.gridx = 0; gc.gridy = r; form.add(new JLabel("Job Deadline (YYYY-MM-DD):"), gc);
         gc.gridx = 1; gc.gridy = r++; form.add(deadlineField, gc);
 
         // --- BUTTONS ---
         JButton addButton = new JButton("Add to List");
         JButton saveButton = new JButton("Save List to File");
         JButton clearButton = new JButton("Clear Form");
-        JButton LogoutButton = new JButton("Logout");
+        JButton logoutButton = new JButton("Logout");
 
         JPanel buttons = new JPanel();
         buttons.setOpaque(false);
         buttons.add(addButton);
         buttons.add(saveButton);
         buttons.add(clearButton);
-        buttons.add(LogoutButton);
+        buttons.add(logoutButton);
 
         gc.gridx = 0; gc.gridy = r; gc.gridwidth = 2;
         form.add(buttons, gc);
@@ -118,7 +120,7 @@ public class VisJob extends JFrame {
         addButton.addActionListener(this::onAdd);
         saveButton.addActionListener(this::onSave);
         clearButton.addActionListener(e -> clearForm());
-        LogoutButton.addActionListener(e -> {
+        logoutButton.addActionListener(e -> {
             dispose();
             try {
                 new LandingPage().setVisible(true);
@@ -138,6 +140,15 @@ public class VisJob extends JFrame {
 
         if (clientId.isEmpty() || deadline.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please fill in all fields.");
+            return;
+        }
+
+        // ✅ Validate date format and ensure not in the past
+        if (!isValidDate(deadline)) {
+            JOptionPane.showMessageDialog(this,
+                    "Invalid or past date. Please use YYYY-MM-DD and ensure it’s today or later (e.g., 2025-10-07).",
+                    "Invalid Date",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -191,6 +202,8 @@ public class VisJob extends JFrame {
 
         JOptionPane.showMessageDialog(this, "Saved all entries to " + CSV_FILE);
     }
+    
+    
 
     /** Clears all input fields. */
     private void clearForm() {
@@ -231,6 +244,22 @@ public class VisJob extends JFrame {
             }
         }
     }
+
+    /**
+     * Checks if the given string is a valid date in yyyy-MM-dd format
+     * and ensures it is today or in the future.
+     /** Checks if the deadline input is a valid date in yyyy-MM-dd or yyyy-M-d format. */
+    private boolean isValidDate(String dateStr) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
+            LocalDate enteredDate = LocalDate.parse(dateStr, formatter);
+            LocalDate today = LocalDate.now();
+            return !enteredDate.isBefore(today); // ✅ only today or future
+        } catch (DateTimeParseException ex) {
+            return false; // invalid format or impossible date
+        }
+    }
+
 
     /** Test entry point. */
     public static void main(String[] args) {

@@ -22,3 +22,81 @@ Client ID: 5555
 Duration: 1 days
 Deadline: 10/16/25
 -------------------------
+Username: princetaller
+Timestamp: 2025-10-06 20:48:38
+Client ID: 12345
+Duration: 6 hours
+Deadline: 10/10/25
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 07:23:00
+Client ID: 55678
+Duration: 8 hours
+Deadline: 10/23/25
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 07:23:33
+Client ID: 55678
+Duration: 2 hours
+Deadline: 12/25/25
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:02:39
+Client ID: 123456
+Duration: 5 hours
+Deadline: 10/25/2025
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:08:02
+Client ID: 123456
+Duration: 7 hours
+Deadline: 2025-12-25
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:17:56
+Client ID: 1234456
+Duration: 5 hours
+Deadline: 2025-10-7
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:18:09
+Client ID: 1234456
+Duration: 6 hours
+Deadline: 2025-10-07
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:30:47
+Client ID: 123456
+Duration: 6 hours
+Deadline: 2025-10-7
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:45:34
+Client ID: 123456
+Duration: 8 hours
+Deadline: 2025-10-07
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:45:44
+Client ID: 123456
+Duration: 1 hours
+Deadline: 2025-10-06
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:55:26
+Client ID: 12094208
+Duration: 10 hours
+Deadline: 2025-10-05
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:58:05
+Client ID: 12345
+Duration: 10 hours
+Deadline: 2025-10-08
+-------------------------
+Username: princetaller
+Timestamp: 2025-10-07 09:58:15
+Client ID: 12345
+Duration: 1 hours
+Deadline: 2025-10-07
+-------------------------
