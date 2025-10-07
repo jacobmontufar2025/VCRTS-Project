@@ -90,14 +90,14 @@ public class VisJob extends JFrame {
         JButton addButton = new JButton("Add to List");
         JButton saveButton = new JButton("Save List to File");
         JButton clearButton = new JButton("Clear Form");
-        JButton backButton = new JButton("Back");
+        JButton LogoutButton = new JButton("Logout");
 
         JPanel buttons = new JPanel();
         buttons.setOpaque(false);
         buttons.add(addButton);
         buttons.add(saveButton);
         buttons.add(clearButton);
-        buttons.add(backButton);
+        buttons.add(LogoutButton);
 
         gc.gridx = 0; gc.gridy = r; gc.gridwidth = 2;
         form.add(buttons, gc);
@@ -118,7 +118,7 @@ public class VisJob extends JFrame {
         addButton.addActionListener(this::onAdd);
         saveButton.addActionListener(this::onSave);
         clearButton.addActionListener(e -> clearForm());
-        backButton.addActionListener(e -> {
+        LogoutButton.addActionListener(e -> {
             dispose();
             try {
                 new LandingPage().setVisible(true);
